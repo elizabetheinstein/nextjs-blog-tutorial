@@ -7,7 +7,11 @@ import Image from 'next/image'
 const name = 'Liz Einstein'
 export const siteTitle = 'Sample Blog Website'
 
-export default function Layout({ children, home }) {
+const Layout = (
+  { children, home }: {
+  children: React.ReactNode
+  home?: boolean
+}) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -67,3 +71,5 @@ export default function Layout({ children, home }) {
     </div>
   )
 }
+
+export default Layout
